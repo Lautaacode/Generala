@@ -14,19 +14,41 @@ void jugar();//jugadas
 
 int main(){
     
-    //variables
-    int i = 0;
-    //arrays
+    //variable
+    int i, j, jugadores = 0;
+    int tirada = 1;
+    //array
     int jugador1[5]={};
+    //martiz
+    int matriz[11][5];
 
-    cout << "Ingrese la cantidad de jugadores" << endl;
-    //cin >> jugadores;
-    //cout << cuadro << endl;
-
+    cout << "Ingrese la cantidad de jugadores: ";
+    cin >> jugadores;
+    cout << endl;
+    //tirar dados
     tirar(jugador1);
-    cout << jugador1[0] << " " << jugador1[1] << " "
-         << jugador1[2] << " " << jugador1[3] << " "
-         << jugador1[4] << endl;
+
+    //mostrar
+    for (j; j <= 3; j++){
+        //numero de tirada
+        cout << "tirada n°: " << j << "\n ";
+        for (i; i < 5; i++){
+            cout << jugador1[i] << " ";
+        }
+        cout << endl;
+    }
+
+    //creacion de matriz
+    for (int i=0; i<11; i++){
+        for (int j=0; j<jugadores; j++){
+            matriz[i][j] = jugador1[i];
+            //mostrar puntaje
+            cout << matriz[i][j] << " ";
+    
+        }
+        cout << endl;
+    }
+  
 
     return 0;
 }
@@ -45,17 +67,7 @@ int tirar(int juego[]){
     return *juego;
 }
 
-void jugar(int juego[], int jugador){}
-
-
-
-
-
-
-
-
-
-
+void jugar(){}
 
 
 
